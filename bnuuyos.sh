@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git clone https://github.com/rozniak/xfce-winxp-tc.github
+git clone https://github.com/rozniak/xfce-winxp-tc.git
 cd xfce-winxp-tc/packaging/
 chmod +x buildall.sh chkdeps.sh
 apt update && apt upgrade
