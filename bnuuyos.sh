@@ -10,8 +10,8 @@ apt install cmake
 ./buildall.sh
 
 # copy default binary folder to a custom one because cmake
-mv $(ls | grep -w 'master') built
+cd xfce-winxp-tc/packaging/xptc
+mv $(ls | grep -w 'master') ~/bnuuyos/built
 
 ed /etc/os-release 1 c NAME="bnuuyOS" w /etc/os-release
-ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.23.09" w /etc/os-release
-
+ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.02.10" w /etc/os-release
