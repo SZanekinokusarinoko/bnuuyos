@@ -12,4 +12,4 @@ apt install cmake
 sudo dpkg -i xfce-winxp-tc/packaging/xptc/$(ls | grep -w 'master')/deb/x86_64
 
 ed /etc/os-release 1 c NAME="bnuuyOS" w /etc/os-release
-ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.02.10" w /etc/os-release
+ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.03.10" w /etc/os-release
