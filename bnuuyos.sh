@@ -6,7 +6,7 @@ apt update && apt upgrade
 apt install $(./chkdeps.sh -l | cut -d':' -f2 | tr '\n' ' ')
 # apparently cmake isn't one of the dependencies checked, maybe adjust later?
 apt install cmake
-./buildall.sh
+./xfce-winxp-tc/packaging/buildall.sh
 
 # grep magic needed to install binaries, blame cmake
 sudo dpkg -i xfce-winxp-tc/packaging/xptc/$(ls | grep -w 'master')/deb/x86_64
