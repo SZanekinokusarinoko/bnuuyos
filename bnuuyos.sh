@@ -1,12 +1,13 @@
 #!/bin/bash
 
 git clone https://github.com/rozniak/xfce-winxp-tc.git
-chmod +x ~/xfce-winxp-tc/packaging/buildall.sh chkdeps.sh
+cd xfce-winxp-tc/packaging/
+chmod +x buildall.sh chkdeps.sh
 apt update && apt upgrade
 apt install $(./chkdeps.sh -l | cut -d':' -f2 | tr '\n' ' ')
 # apparently cmake isn't one of the dependencies checked, maybe adjust later?
 apt install cmake
-./xfce-winxp-tc/packaging/buildall.sh
+./buildall.sh
 
 # grep magic needed to install binaries, blame cmake
 sudo dpkg -i xfce-winxp-tc/packaging/xptc/$(ls | grep -w 'master')/deb/x86_64
