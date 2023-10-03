@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git clone https://github.com/rozniak/xfce-winxp-tc.git
 cd xfce-winxp-tc/packaging/
@@ -11,7 +11,8 @@ apt install cmake
 
 # copy default binary folder to a custom one because cmake
 cd xfce-winxp-tc/packaging/xptc
-mv $(ls | grep -w 'master') ~/bnuuyos/built
+cp -R $(ls | grep -w 'master') ~/bnuuyos/bin
+dpkg -i ~/bnuuyos/bin/deb/x86_64
 
 ed /etc/os-release 1 c NAME="bnuuyOS" w /etc/os-release
 ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.02.10" w /etc/os-release
