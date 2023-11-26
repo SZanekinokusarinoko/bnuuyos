@@ -12,7 +12,8 @@ apt install cmake
 # grep magic needed to install binaries, blame cmake. Weird varible nonsense needed to use directory, blame bash(?)
 cd xptc/
 bndr=$(ls | grep -w 'master')
-sudo dpkg -i ./xfce-winxp-tc/packaging/xptc/$bndr/deb/x86_64/*.deb
+mv $bndr ~/bnuuyos/bin
+sudo dpkg -i ~/bnuuyos/bin/deb/x86_64/*.deb
 
-ed /etc/os-release 1 c NAME="bnuuyOS" w /etc/os-release
-ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.03.10" w /etc/os-release
+# ed /etc/os-release 1 c NAME="bnuuyOS" w /etc/os-release
+# ed /etc/os-release 5 c PRETTY_NAME="bnuuyOS Alpha 2023.05.10" w /etc/os-release
